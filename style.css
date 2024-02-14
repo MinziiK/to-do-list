@@ -23,6 +23,7 @@ body{
 
 .task-taps div{
     padding: 1em;
+    cursor: pointer;
 }
 
 #under-line{

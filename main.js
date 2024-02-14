@@ -12,7 +12,14 @@
 
 let taskInput = document.getElementById("task-input");
 let addButton = document.getElementById("add-button");
+let tabs = document.querySelectorAll(".task-tabs div");
 let taskList = [];
+
+console.log(tabs);
+for(let i=1;i<tabs.length;i++){
+    tabs[i].addEventListener("click", function (event){filter(event)})
+}
+
 
 /*  그림그리기  */
 function render(){      
@@ -84,6 +91,11 @@ function deleteTask(id){
     }
     render();
     // console.log(taskList)
+}
+
+
+function filter(event){
+    console.log(filter)
 }
 
 addButton.addEventListener("click", addTask)
