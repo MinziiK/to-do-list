@@ -5,35 +5,44 @@ body{
     background-size: cover;
 }
 
+h1{
+    display: flex;
+    justify-content: center;
+}
+
 .container{
     background-color: whitesmoke;
     min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+
 .task-area{
     border: 1px solid lightgray;
+    
 }
 
-.task-taps{
+.task-tabs{
     display: flex;
     border-bottom: 1px solid lightgray;
     position: relative;
+    justify-content: space-around;
 }
 
-.task-taps div{
+.task-tabs div{
     padding: 1em;
     cursor: pointer;
 }
 
 #under-line{
     height: 6px;
-    background-color: lightpink;
+    background-color: #9aedb6;
     position: absolute;
-    width: 50px;
+    width: 0px;
     left: 0px;
     top: 50px;
     padding: 0px;
+    transition: 0.5s;
 }
 
 .task{
@@ -43,4 +52,36 @@ body{
 
 .task-done{
     text-decoration: line-through;
+}
+
+.input-area{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-area input[type="text"] {
+    margin-right: 5px; /* 오른쪽 여백 추가 */
+}
+
+#task-input{
+    width: 500px; /* 원하는 너비 설정 */
+    padding: 15px; /* 내부 여백 설정 */
+    border: 1px solid #ccc; /* 테두리 스타일 및 색상 설정 */
+    border-radius: 10px; /* 라운드 처리된 모서리 설정 */
+    outline: none; /* 포커스시 테두리 제거 */
+}
+
+#add-button{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #c0efd0;
+    border-radius: 5px;
+    border: none;
+}
+
+#add-button:hover{
+    transform: scale(1.03);
+    background-color: #aceac1;
 }
