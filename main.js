@@ -77,7 +77,7 @@ function toggleComplete(id){
             break;
         }
     }
-    render();
+    filter();
     // console.log(taskList)
 }
 
